@@ -1,0 +1,13 @@
+<div class="col-md-12">
+	<%= link_to image_tag(@article.picture), article_path(@article) %>
+	<p>Posted by: <%=  link_to @article.user.name, profile_path(@article.user) %>, 
+	Posted <%= time_ago_in_words(@article.created_at) %> ago </p>
+
+	<p><%= raw @article.tag_list.map { |tag|  link_to tag, tag_path(tag) }.join(', ')  %></p>
+
+	<h1><%= @article.title %></h1>
+
+	<p><%= @article.content %></p>
+
+	<%= render "disqus" %>
+</div>

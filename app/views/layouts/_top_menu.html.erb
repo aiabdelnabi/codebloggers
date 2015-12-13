@@ -1,0 +1,10 @@
+<div class="user-mini-controls">
+	<ul>
+		<% if user_signed_in? %>
+			<li><%= link_to current_user.name, profile_path(current_user) %> | </li>
+			<li><%= link_to "sign out", signout_path %></li>
+		<% else %>
+			<li><%= link_to "sign in" , signin_path %></li>
+		<% end %>
+	</ul>
+</div>

@@ -1,0 +1,9 @@
+<% if object.errors.any? %>
+<div class="col-md-12 alert alert-danger">
+	<ul>
+		<% object.errors.full_messages.each do |error| %>
+			<p><%= error %></p>
+		<% end %>
+	</ul>
+</div>
+<% end %>

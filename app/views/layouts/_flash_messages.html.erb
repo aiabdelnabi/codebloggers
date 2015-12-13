@@ -1,0 +1,7 @@
+<% flash.each do |key, value| %>
+	<% unless key.include?("timedout") %>
+		<div class="<%= bootstrap_class_new_name(key) %>">
+			<p ><%= value %></p>
+		</div>
+	<% end %>
+<% end %>

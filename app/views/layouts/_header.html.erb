@@ -1,0 +1,20 @@
+<div class="col-md-3 main-sidebar">
+	<aside>
+		<h2 class="logo"> <%= link_to "CODE BLOGGERS", root_path %></h2>
+		<div class="col-md-12 center btn-group-lg">
+			<%= link_to "New Article", new_article_path, class: "btn btn-success"  if user_signed_in? %>
+		</div>
+		<div class="col-md-12 tags">
+			<%= render "layouts/tags_clouds" %>
+		</div>
+
+		<div class="col-md-12 contact-info">
+			<ul>
+				<li><a href="#">Github</a></li>
+				<li><a href="#">LinkedIn</a></li>
+				<li><a href="#">Twitter</a></li>
+			</ul>
+		</div>
+
+	</aside>
+</div>

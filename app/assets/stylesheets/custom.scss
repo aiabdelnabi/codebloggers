@@ -1,0 +1,84 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+
+$default-border-radius: 5px !default;
+@mixin border-radius($radius: $default-border-radius) {
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+html,body { height: 100%; margin: 0px; padding: 0px; }
+
+.container{
+	height: 100%;
+	margin: 0px; 
+	padding: 0px;
+	ul{
+		list-style: none;
+		float: left;
+		li{
+			display: inline;
+		}
+	}
+}
+
+.main-sidebar{
+	float: left;
+	background: #2d303b;
+	min-height:100%;
+	.logo a{
+		color: #fff;
+		text-decoration: none
+	}
+	.tags{
+		margin: 25px 0;
+		a{
+			float: left;
+			color: #000;
+			text-decoration: none;
+			background: #fff;
+			padding: 5px;
+			margin: 0 0 10px 10px;
+			@include border-radius(10px)
+		}
+	}
+	.contact-info{
+		li{
+			display: inline;
+		}
+	}
+}
+
+.main-body{
+	float: left;
+
+	.user-mini-controls{
+		float: right;
+		li{
+			display: inline;
+		}
+	}
+}
+
+.main-articles{
+	.article{
+		background: #f1f1f1;
+		margin: 0 10px 10px 0;
+		padding: 10px 20px;
+		ul{
+			margin: 0;
+			padding: 0;
+		}
+		@include border-radius(5px)
+	}
+}
+
+.center {  text-align:center; }
+
+.css1 { font-size: 1.0em; }
+.css2 { font-size: 1.2em; }
+.css3 { font-size: 1.4em; }
+.css4 { font-size: 1.6em; }
